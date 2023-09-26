@@ -1,0 +1,74 @@
+# Report on the Neural Network Models for Alphabet Soup
+
+## Overview of the Analysis
+
+The purpose of this analysis is to develop and evaluate three deep learning neural network models for Alphabet Soup, a charitable organization. Alphabet Soup has requested a predictive model to determine which organizations are likely to be successful after receiving funding. To achieve this, we used a dataset containing various features related to charitable organizations and their funding success.
+
+## Results
+
+### Data Preprocessing
+
+**Target Variable:**
+- The target variable for our model is "IS_SUCCESSFUL," which represents whether an organization that received funding was successful (1) or not (0).
+
+**Features:**
+- The features used in the models include various columns from the dataset such as "APPLICATION_TYPE," "AFFILIATION," "CLASSIFICATION," "USE_CASE," "ORGANIZATION," "STATUS," "INCOME_AMT," "SPECIAL_CONSIDERATIONS," and "ASK_AMT."
+
+**Removed Variables:**
+- We removed the "EIN" and "NAME" columns from the input data as they are neither targets nor features and do not contribute to the predictive power of the models.
+
+### Compiling, Training, and Evaluating the Models
+
+#### First Model:
+
+- This model consisted of one hidden layer with 10 neurons and used the "relu" activation function, and another hidden layer with 5 neurons and used the "relu" activation function. 
+- We achieved the following results for the first model:
+  - Loss: 0.5164 
+  - Accuracy:  0.7250
+
+#### Second Model:
+
+- The second model had one hidden layer with 5 neurons and used the "relu" activation function.
+- Results for the second model were as follows:
+  - Loss: 1.6351
+  - Accuracy: 0.7746
+
+#####Significance:
+-The loss value of 1.6351 is significantly higher compared to the first model. This suggests that the model's predictions are less accurate, and it may not be fitting the data as well.
+
+-However, the accuracy of 0.7746 is relatively high, indicating that the model correctly predicted the target variable for approximately 77.46% of the samples in the test dataset. While the loss is high, the accuracy is good, which can happen when there's class imbalance or other factors influencing the evaluation.
+
+#### Optimization Model:
+
+- For the optimization model, we made changes to the architecture and hyperparameters to improve performance.
+- This model included 1 hidden layer with 10 neurons and used the "relu" activation function for the hidden layer.
+- This model had an epoch of 30 instead of 20. 
+- Results for the optimization model were as follows:
+  - Loss: 0.5482
+  - Accuracy: 0.7986
+
+##### Significance:
+- The loss value of 0.5482 is lower compared to the second model but slightly higher than the loss of the first model. This suggests that the optimization model is able to fit the data better than the second model but not quite as well as the first model.
+
+- The accuracy of 0.7986 is slightly higher than the accuracy of the first model, indicating that the optimization model correctly predicted the target variable for approximately 79.86% of the samples in the test dataset.
+
+### Overall Significance:
+
+- The first model had a reasonable balance between accuracy and loss.
+- The second model had a high accuracy but a significantly higher loss, suggesting potential overfitting.
+- The optimization model aimed to strike a balance between the two by fine-tuning the architecture and hyperparameters, resulting in slightly improved accuracy and a reasonable loss.
+- These results suggest that while the optimization model may not have achieved a dramatically better accuracy, it offers a better trade-off between fitting the data and generalization to unseen data compared to the second model. Further fine-tuning and experimentation may be needed to improve model performance even more.
+
+### Summary
+
+In summary, the analysis involved creating and evaluating three deep learning neural network models to predict the success of charitable organizations receiving funding from Alphabet Soup. The models varied in architecture and hyperparameters, with the optimization model achieving the highest accuracy of 78.30%.
+
+However, even with the optimized model, the accuracy might not be sufficient for Alphabet Soup's goals. To improve model performance further, we recommend exploring additional approaches, including:
+
+1. **Feature Engineering:** Investigate feature engineering techniques to create more informative features or encoding strategies for categorical variables.
+
+2. **Ensemble Methods:** Consider using ensemble methods like random forests or gradient boosting, which can often provide superior predictive power.
+
+3. **Data Augmentation:** If possible, acquire additional data or explore data augmentation techniques to increase the dataset's size and diversity.
+
+Ultimately, the choice of approach should be guided by Alphabet Soup's specific goals and constraints. Further experimentation and fine-tuning are recommended to develop a model that meets the organization's requirements for predicting charitable organization success.
