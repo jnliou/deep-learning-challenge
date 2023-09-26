@@ -74,7 +74,7 @@ The project files are organized in the "deep-learning-challenge" repository as f
 - **AlphabetSoupCharity_model1.ipynb** and **AlphabetSoupCharity_model2.ipynb**: Jupyter Notebooks containing code for initial model iterations.
 - **AlphabetSoupCharity_model1.h5** and **AlphabetSoupCharity_model2.h5**: The HDF5 file containing the trained deep learning model.
 - **AlphabetSoupCharity_Optimization.h5**: The HDF5 file containing the optimized deep learning model.
-- **[charity_data.csv]('https://static.bc-edx.com/data/dl-1-2/m21/lms/starter/charity_data.csv')**: The dataset provided for the analysis.
+- **Dataset**: https://static.bc-edx.com/data/dl-1-2/m21/lms/starter/charity_data.csv
 
 For the complete project and code files, please refer to the GitHub repository: [deep-learning-challenge](https://github.com/jnliou/deep-learning-challenge).
 
