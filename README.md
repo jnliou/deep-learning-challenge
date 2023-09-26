@@ -40,7 +40,7 @@ To achieve a target predictive accuracy higher than 75%, we optimized the model 
 - Experimented with adding more neurons, hidden layers, and different activation functions.
 - Tuned the number of epochs in the training regimen.
 
-The optimized model results were saved in a new HDF5 file named "AlphabetSoupCharity_Optimization.h5."
+The optimized model results were saved in a new HDF5 file named "AlphabetSoupCharity_Optimization_model1.h5."
 
 ## Step 4: Report on the Neural Network Model
 
